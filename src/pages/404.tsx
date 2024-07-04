@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 export default function NotFound() {
-	const router = useRouter();
+  const router = useRouter();
 
-	useEffect(() => {
-		router.replace("/");
-	});
-};
+  useEffect(() => {
+    router.replace("/");
+  });
+}

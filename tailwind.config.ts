@@ -12,6 +12,28 @@ const config: Config = {
     extend: {
       backgroundImage: {
         wallpaper: "url('/wallpaper.png')"
+      },
+      backgroundSize: {
+        200: "200%"
+      },
+      animation: {
+        gradient: "gradient 3s linear infinite",
+        fade: "fade 0.05s ease-in-out"
+      },
+      keyframes: {
+        gradient: {
+          to: {
+            backgroundPosition: "200% center"
+          }
+        },
+        fade: {
+          "0%": {
+            opacity: "0"
+          },
+          "100%": {
+            opacity: "1"
+          }
+        }
       }
     }
   },

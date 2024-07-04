@@ -3,7 +3,8 @@ import Head from "next/head";
 import NextImage from "next/image";
 import { Inter } from "next/font/google";
 import { Card, Image, Link } from "@nextui-org/react";
-import { FaDiscord, FaGithub, FaReddit, FaSpotify } from "react-icons/fa";
+import { FaDiscord, FaGithub, FaReddit } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +20,8 @@ export default function Home() {
       href: "https://github.com/FireStreaker2"
     },
     {
-      icon: <FaSpotify />,
-      href: "https://open.spotify.com/user/a2okhh9x1dg64e5l6kbejlclt?si=9672334a4b2d4e7f"
+      icon: <MdEmail />,
+      href: "mailto:help@firestreaker2.gq"
     },
     {
       icon: <FaDiscord />,
@@ -53,7 +54,7 @@ export default function Home() {
         <link rel="icon" type="image/x-icon" href="/pfp.png" />
       </Head>
       <main
-        className={`flex min-h-screen items-center justify-center ${inter.className} bg-wallpaper bg-cover bg-center`}
+        className={`flex min-h-screen animate-fade items-center justify-center ${inter.className} bg-wallpaper bg-cover bg-center`}
       >
         <Card
           isBlurred
@@ -66,19 +67,22 @@ export default function Home() {
             height={250}
             alt="Profile Picture"
             radius="lg"
-            className="my-5"
+            className="my-5 transition-transform duration-100 ease-in-out hover:rotate-2 hover:scale-110"
+            isBlurred
+            priority
           />
 
-          <h1 className="bg-gradient-to-r from-blue-600 to-blue-300 bg-clip-text text-5xl text-transparent">
+          <h1 className="animate-gradient bg-gradient-to-r from-blue-300 via-blue-700 to-blue-300 bg-200 bg-clip-text text-5xl text-transparent">
             FireStreaker2
           </h1>
           <p>Fullstack Web Developer</p>
           <div className="mt-5 flex flex-row gap-5">
-            {socials.map((social, i) => (
+            {socials.map((social) => (
               <Link
                 href={social.href}
-                className="text-5xl text-blue-200"
-                key={i}
+                target="_blank"
+                className="text-5xl text-blue-200 transition-transform duration-200 ease-in-out hover:scale-125"
+                key={social.href}
               >
                 {social.icon}
               </Link>
