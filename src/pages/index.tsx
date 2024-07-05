@@ -1,10 +1,11 @@
 import { JSX } from "react";
 import Head from "next/head";
-import NextImage from "next/image";
+import Image from "next/image";
 import { Inter } from "next/font/google";
-import { Card, Image, Link } from "@nextui-org/react";
+import { Card, Link } from "@nextui-org/react";
 import { FaDiscord, FaGithub, FaReddit } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import pfp from "../../public/pfp.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -58,30 +59,28 @@ export default function Home() {
       >
         <Card
           isBlurred
-          className="flex h-2/3 w-2/3 flex-col items-center p-10 text-center opacity-95"
+          className="flex h-5/6 w-11/12 flex-col items-center p-5 text-center opacity-95 sm:p-10 md:h-2/3 md:w-2/3"
         >
           <Image
-            as={NextImage}
-            src="/pfp.png"
-            width={250}
-            height={250}
+            src={pfp}
             alt="Profile Picture"
-            radius="lg"
-            className="my-5 transition-transform duration-100 ease-in-out hover:rotate-2 hover:scale-110"
-            isBlurred
+            className="my-5 h-auto w-36 rounded-lg transition-transform duration-100 ease-in-out hover:rotate-2 hover:scale-110 md:w-64"
+            sizes="250px"
             priority
           />
 
-          <h1 className="animate-gradient bg-gradient-to-r from-blue-300 via-blue-700 to-blue-300 bg-200 bg-clip-text text-5xl text-transparent">
+          <h1 className="animate-gradient bg-gradient-to-r from-blue-300 via-blue-700 to-blue-300 bg-200 bg-clip-text text-3xl text-transparent sm:text-4xl md:text-5xl">
             FireStreaker2
           </h1>
-          <p>Fullstack Web Developer</p>
-          <div className="mt-5 flex flex-row gap-5">
+          <p className="text-sm sm:text-base md:text-lg">
+            Fullstack Web Developer
+          </p>
+          <div className="mt-5 flex flex-row gap-2 sm:gap-3 md:gap-5">
             {socials.map((social) => (
               <Link
                 href={social.href}
                 target="_blank"
-                className="text-5xl text-blue-200 transition-transform duration-200 ease-in-out hover:scale-125"
+                className="text-3xl text-blue-200 transition-transform duration-200 ease-in-out hover:scale-125 sm:text-4xl md:text-5xl"
                 key={social.href}
               >
                 {social.icon}

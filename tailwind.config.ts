@@ -11,14 +11,14 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        wallpaper: "url('/wallpaper.png')"
+        wallpaper: "url('/wallpaper.webp')"
       },
       backgroundSize: {
         200: "200%"
       },
       animation: {
         gradient: "gradient 3s linear infinite",
-        fade: "fade 0.05s ease-in-out"
+        fade: "fade 1s ease-in-out"
       },
       keyframes: {
         gradient: {
