@@ -1,13 +1,13 @@
 import { JSX } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import { Card, Link } from "@nextui-org/react";
 import { FaDiscord, FaGithub, FaReddit } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import pfp from "../../public/pfp.png";
+import pfp from "../../public/pfp.webp";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = JetBrains_Mono({ subsets: ["latin"] });
 
 interface Social {
   icon: JSX.Element;
@@ -46,16 +46,16 @@ export default function Home() {
         <meta property="og:title" content="FireStreaker2's Website" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://firestreaker2.gq" />
-        <meta property="og:image" content="http://firestreaker2.gq/pfp.png" />
+        <meta property="og:image" content="http://firestreaker2.gq/pfp.webp" />
         <meta property="og:description" content="FireStreaker2's Website" />
         <meta name="theme-color" content="#00b2ff" />
         <meta name="twitter:card" content="summary_large_image" />
 
         <title>FireStreaker2&apos;s Website</title>
-        <link rel="icon" type="image/x-icon" href="/pfp.png" />
+        <link rel="icon" type="image/x-icon" href="/pfp.webp" />
       </Head>
       <main
-        className={`flex min-h-screen animate-fade items-center justify-center ${inter.className} bg-wallpaper bg-cover bg-center`}
+        className={`flex min-h-screen animate-fade items-center justify-center ${font.className} bg-wallpaper bg-cover bg-center`}
       >
         <Card
           isBlurred
