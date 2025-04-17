@@ -2,12 +2,19 @@ import { JSX } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { JetBrains_Mono } from "next/font/google";
-import { Card, Link } from "@nextui-org/react";
+import { Alert, Card, Link } from "@heroui/react";
 import { FaDiscord, FaGithub, FaReddit } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import pfp from "../../public/pfp.webp";
+import cute from "../../public/cute.webp";
 
 const font = JetBrains_Mono({ subsets: ["latin"] });
+
+const Cute = () => {
+  return (
+    <Image src={cute} alt="🩵" className="h-8 w-8 rounded-full" priority />
+  );
+};
 
 interface Social {
   icon: JSX.Element;
@@ -88,6 +95,17 @@ export default function Home() {
             ))}
           </div>
         </Card>
+        <Link
+          href="https://www.youtube.com/watch?v=7WFg2wq10rw"
+          target="_blank"
+          className="absolute bottom-0 left-4 my-3 flex w-5/6 items-center sm:w-2/3 md:w-1/3 lg:w-1/4 xl:w-1/5"
+        >
+          <Alert
+            color="primary"
+            title="Forever my little shark 🩵..."
+            icon={<Cute />}
+          />
+        </Link>
       </main>
     </>
   );

@@ -1,6 +1,6 @@
 # About
 
-My personal website built with [NextJS](https://nextjs.org/) and [NextUI](https://nextui.org/). Viewable at https://firestreaker2.gq!
+My personal website built with [NextJS](https://nextjs.org/) and [HeroUI](https://www.heroui.com/). Viewable at https://firestreaker2.gq!
 
 # Development
 
